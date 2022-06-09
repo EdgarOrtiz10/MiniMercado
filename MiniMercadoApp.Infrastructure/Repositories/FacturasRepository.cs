@@ -12,25 +12,25 @@ namespace MiniMercadoApp.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<TblFactura> GetFactura()
+        public IEnumerable<Factura> GetFactura()
         {
-            return _context.TblFacturas;
+            return _context.Facturas;
         }
 
-        public TblFactura GetFacturaById(int IdFactura)
+        public Factura GetFacturaById(int IdFactura)
         {
-            return _context.TblFacturas.FirstOrDefault(x => x.IdFactura == IdFactura);
+            return _context.Facturas.FirstOrDefault(x => x.IdFactura == IdFactura);
         }
 
-        public void InsertFactura(TblFactura facturas)
+        public void InsertFactura(Factura facturas)
         {
-            _context.TblFacturas.Add(facturas);
+            _context.Facturas.Add(facturas);
             _context.SaveChanges();
         }
 
-        public void UpdateFactura(TblFactura facturas)
+        public void UpdateFactura(Factura facturas)
         {
-            var facturasExistente = _context.TblFacturas.FirstOrDefault(x => x.IdFactura == facturas.IdFactura);
+            var facturasExistente = _context.Facturas.FirstOrDefault(x => x.IdFactura == facturas.IdFactura);
             facturasExistente.IdFactura = facturas.IdFactura;
             facturasExistente.Fecha = facturas.Fecha;
             facturasExistente.ValorFactura = facturas.ValorFactura;
@@ -41,8 +41,8 @@ namespace MiniMercadoApp.Infrastructure.Repositories
 
         public void DeleteFactura(int IdFacturas)
         {
-            var facturaExistente = _context.TblFacturas.FirstOrDefault(x => x.IdFactura == IdFacturas);
-            _context.TblFacturas.Remove(facturaExistente);
+            var facturaExistente = _context.Facturas.FirstOrDefault(x => x.IdFactura == IdFacturas);
+            _context.Facturas.Remove(facturaExistente);
             _context.SaveChanges();
         }
     }

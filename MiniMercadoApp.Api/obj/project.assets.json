@@ -5635,11 +5635,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Api\\MiniMercadoApp.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Api\\MiniMercadoApp.Api.csproj",
       "projectName": "MiniMercadoApp.Api",
-      "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Api\\MiniMercadoApp.Api.csproj",
+      "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Api\\MiniMercadoApp.Api.csproj",
       "packagesPath": "C:\\Users\\Edgar O\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Api\\obj\\",
+      "outputPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Edgar O\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5656,14 +5656,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Aplication\\MiniMercadoApp.Aplication.csproj": {
-              "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Aplication\\MiniMercadoApp.Aplication.csproj"
+            "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Aplication\\MiniMercadoApp.Aplication.csproj": {
+              "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Aplication\\MiniMercadoApp.Aplication.csproj"
             },
-            "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Domain\\MiniMercadoApp.Domain.csproj": {
-              "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Domain\\MiniMercadoApp.Domain.csproj"
+            "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Domain\\MiniMercadoApp.Domain.csproj": {
+              "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Domain\\MiniMercadoApp.Domain.csproj"
             },
-            "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Infrastructure\\MiniMercadoApp.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Infrastructure\\MiniMercadoApp.Infrastructure.csproj"
+            "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Infrastructure\\MiniMercadoApp.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Infrastructure\\MiniMercadoApp.Infrastructure.csproj"
             }
           }
         }

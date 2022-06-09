@@ -30,7 +30,7 @@ namespace MiniMercadoApp.Api.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public IActionResult Get([FromRoute] GetProveedoresByIdRequest request)
         {
             return Ok(_repository.GetProveedoresById(request.Id));
@@ -40,7 +40,7 @@ namespace MiniMercadoApp.Api.Controllers
         [HttpPost]
         public IActionResult Post(CreateProveedoresRequest request)
         {
-            var Proveedores = _mapper.Map<TblProveedore>(request);
+            var Proveedores = _mapper.Map<Proveedores>(request);
             _repository.InsertProveedores(Proveedores);
             return Ok();
         }
@@ -48,21 +48,12 @@ namespace MiniMercadoApp.Api.Controllers
         [HttpPut]
         public IActionResult Put(UpdateProveedoresRequest request)
         {
-            var Proveedores = _mapper.Map<TblProveedore>(request);
+            var Proveedores = _mapper.Map<Proveedores>(request);
             _repository.UpdateProveedores(Proveedores);
             return Ok();
         }
 
-        [HttpPut]
-        public IActionResult put(UpdateProveedoresRequest request)
-        {
-            var Proveedores = _mapper.Map<TblProveedore>(request);
-            _repository.UpdateProveedores(Proveedores);
-            return Ok();
-        }
-
-
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute] DeleteProveedoresRequest request)
         {
             _repository.DeleteProveedores(request.Id);

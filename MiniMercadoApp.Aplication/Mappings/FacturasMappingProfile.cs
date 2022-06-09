@@ -9,11 +9,11 @@ namespace MiniMercadoApp.Aplication.Mappings
     {
         public FacturasMappingProfile()
         {
-            CreateMap<CreateFacturasRequest, TblFactura>();
-            CreateMap<TblFactura, CreateFacturasRequest>();
+            CreateMap<CreateFacturasRequest, Factura>();
+            CreateMap<Factura, CreateFacturasRequest>();
 
-            CreateMap<UpdateFacturasRequest, TblFactura>();
-            CreateMap<TblFactura, UpdateFacturasRequest>();
+            CreateMap<UpdateFacturasRequest, Factura>();
+            CreateMap<Factura, UpdateFacturasRequest>();
         }
     }
 }

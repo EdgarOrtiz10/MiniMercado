@@ -12,25 +12,25 @@ namespace MiniMercadoApp.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<TblCliente> GetCliente()
+        public IEnumerable<Cliente> GetCliente()
         {
-            return _context.TblCliente;
+            return _context.Cliente;
         }
 
-        public TblCliente GetClienteById(int IdCliente)
+        public Cliente GetClienteById(int IdCliente)
         {
-            return _context.TblCliente.FirstOrDefault(x => x.IdCliente == IdCliente);
+            return _context.Cliente.FirstOrDefault(x => x.IdCliente == IdCliente);
         }
 
-        public void InsertCliente(TblCliente cliente)
+        public void InsertCliente(Cliente cliente)
         {
-            _context.TblCliente.Add(cliente);
+            _context.Cliente.Add(cliente);
             _context.SaveChanges();
         }
 
-        public void UpdateCliente(TblCliente cliente)
+        public void UpdateCliente(Cliente cliente)
         {
-            var clienteExistente = _context.TblCliente.FirstOrDefault(x => x.IdCliente == cliente.IdCliente);
+            var clienteExistente = _context.Cliente.FirstOrDefault(x => x.IdCliente == cliente.IdCliente);
             clienteExistente.Nombre1 = cliente.Nombre1;
             clienteExistente.Nombre2 = cliente.Nombre2;
             clienteExistente.Apellido1 = cliente.Apellido1;
@@ -44,8 +44,8 @@ namespace MiniMercadoApp.Infrastructure.Repositories
 
         public void DeleteCliente(int IdCliente)
         {
-            var clienteExistente = _context.TblCliente.FirstOrDefault(x => x.IdCliente == IdCliente);
-            _context.TblCliente.Remove(clienteExistente);
+            var clienteExistente = _context.Cliente.FirstOrDefault(x => x.IdCliente == IdCliente);
+            _context.Cliente.Remove(clienteExistente);
             _context.SaveChanges();
         }
     }

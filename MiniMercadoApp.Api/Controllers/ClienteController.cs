@@ -29,39 +29,22 @@ namespace MiniMercadoApp.Api.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public IActionResult Get([FromRoute] GetClienteByIdRequest request)
         {
             return Ok(_repository.GetClienteById(request.Id));
         }
 
 
-        [HttpPost]
-        public IActionResult Post(CreateClienteRequest request)
-        {
-            var cliente = _mapper.Map<TblCliente>(request);
-            _repository.InsertCliente(cliente);
-            return Ok();
-        }
-
         [HttpPut]
         public IActionResult Put(UpdateClienteRequest request)
         {
-            var cliente = _mapper.Map<TblCliente>(request);
+            var cliente = _mapper.Map<Cliente>(request);
             _repository.UpdateCliente(cliente);
             return Ok();
         }
 
-        [HttpPut]
-        public IActionResult put(UpdateClienteRequest request)
-        {
-            var cliente = _mapper.Map<TblCliente>(request);
-            _repository.UpdateCliente(cliente);
-            return Ok();
-        }
-
-
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute] DeleteClienteRequest request)
         {
             _repository.DeleteCliente(request.Id);

@@ -7,12 +7,12 @@ namespace MinimercadoApp.Domain.Interfaces
 {
     public interface IProductosRepository
     {
-        TblProducto GetProductoById(int idProducto);
-        IEnumerable<TblProducto> GetProducto();
+        Productos GetProductoById(int idProducto);
+        IEnumerable<Productos> GetProducto();
 
-        void InsertProducto(TblProducto Producto);
+        void InsertProducto(Productos Producto);
 
-        void UpdateProducto(TblProducto Producto);
+        void UpdateProducto(Productos Producto);
 
         void DeleteProducto(int idProducto);
     }

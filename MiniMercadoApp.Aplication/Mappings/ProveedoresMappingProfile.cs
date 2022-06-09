@@ -14,11 +14,11 @@ namespace MiniMercadoApp.Aplication.Mappings
     {
         public ProveedoresMappingProfile()
         {
-            CreateMap<CreateProveedoresRequest, TblProveedore>();
-            CreateMap<TblProveedore, CreateProveedoresRequest>();
+            CreateMap<CreateProveedoresRequest, Proveedores>();
+            CreateMap<Proveedores, CreateProveedoresRequest>();
 
-            CreateMap<UpdateProveedoresRequest, TblProveedore>();
-            CreateMap<TblProveedore, UpdateProveedoresRequest>();
+            CreateMap<UpdateProveedoresRequest, Proveedores>();
+            CreateMap<Proveedores, UpdateProveedoresRequest>();
         }
     }
 }

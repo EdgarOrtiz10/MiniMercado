@@ -18,6 +18,12 @@ builder.Services.AddDbContext<MiniMercadoContext>(options => options.UseSqlServe
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddTransient<IClienteRepository, ClienteRepository>();
+builder.Services.AddTransient<IFacturasRepository, FacturasRepository>();
+builder.Services.AddTransient<IProductosRepository, ProductosRepository>();
+builder.Services.AddTransient<IProveedoresRepository, ProveedoresRepository>();
+builder.Services.AddTransient<IVentasRepository, VentasRepository>();
+
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices();
 

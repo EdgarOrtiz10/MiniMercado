@@ -12,25 +12,25 @@ namespace MiniMercadoApp.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<TblProveedore> GetProveedores()
+        public IEnumerable<Proveedores> GetProveedores()
         {
-            return _context.TblProveedores;
+            return _context.Proveedoress;
         }
 
-        public TblProveedore GetProveedoresById(int IdProveedores)
+        public Proveedores GetProveedoresById(int IdProveedores)
         {
-            return _context.TblProveedores.FirstOrDefault(x => x.IdProveedor == IdProveedores);
+            return _context.Proveedoress.FirstOrDefault(x => x.IdProveedor == IdProveedores);
         }
 
-        public void InsertProveedores(TblProveedore proveedores)
+        public void InsertProveedores(Proveedores proveedores)
         {
-            _context.TblProveedores.Add(proveedores);
+            _context.Proveedoress.Add(proveedores);
             _context.SaveChanges();
         }
 
-        public void UpdateProveedores(TblProveedore proveedores)
+        public void UpdateProveedores(Proveedores proveedores)
         {
-            var proveedoresExistente = _context.TblProveedores.FirstOrDefault(x => x.IdProveedor == proveedores.IdProveedor);
+            var proveedoresExistente = _context.Proveedoress.FirstOrDefault(x => x.IdProveedor == proveedores.IdProveedor);
             proveedoresExistente.NombreProveedor = proveedores.NombreProveedor;
             proveedoresExistente.DireccionProveedor = proveedores.DireccionProveedor;
             _context.SaveChanges();
@@ -38,8 +38,8 @@ namespace MiniMercadoApp.Infrastructure.Repositories
 
         public void DeleteProveedores(int IdProveedores)
         {
-            var proveedoresExistente = _context.TblProveedores.FirstOrDefault(x => x.IdProveedor == IdProveedores);
-            _context.TblProveedores.Remove(proveedoresExistente);
+            var proveedoresExistente = _context.Proveedoress.FirstOrDefault(x => x.IdProveedor == IdProveedores);
+            _context.Proveedoress.Remove(proveedoresExistente);
             _context.SaveChanges();
         }
     }

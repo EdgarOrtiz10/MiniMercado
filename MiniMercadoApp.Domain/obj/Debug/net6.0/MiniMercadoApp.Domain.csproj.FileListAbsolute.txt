@@ -10,3 +10,15 @@ C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniM
 C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\refint\MiniMercadoApp.Domain.dll
 C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.pdb
 C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\ref\MiniMercadoApp.Domain.dll
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\bin\Debug\net6.0\MiniMercadoApp.Domain.deps.json
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\bin\Debug\net6.0\MiniMercadoApp.Domain.dll
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\bin\Debug\net6.0\MiniMercadoApp.Domain.pdb
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.csproj.AssemblyReference.cache
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.AssemblyInfoInputs.cache
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.AssemblyInfo.cs
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.dll
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\refint\MiniMercadoApp.Domain.dll
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\MiniMercadoApp.Domain.pdb
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Domain\obj\Debug\net6.0\ref\MiniMercadoApp.Domain.dll

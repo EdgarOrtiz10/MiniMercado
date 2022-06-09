@@ -7,12 +7,12 @@ namespace MinimercadoApp.Domain.Interfaces
 {
     public interface IClienteRepository
     {
-        TblCliente GetClienteById(int IdCliente);
-        IEnumerable<TblCliente> GetCliente();
+        Cliente GetClienteById(int IdCliente);
+        IEnumerable<Cliente> GetCliente();
 
-        void InsertCliente(TblCliente cliente);
+        void InsertCliente(Cliente cliente);
 
-        void UpdateCliente(TblCliente cliente);
+        void UpdateCliente(Cliente cliente);
 
         void DeleteCliente(int IdCliente);
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iA2povWFb/tPQct5R+ofWuO0xZvyQ57hWs9kfjm/mQmSyk8mLnZ58guUENLKfd52CAfD/KzpRZTI+9/d0pf8IA==",
+  "dgSpecHash": "XzNwcyVNUpn1ouWi6Gf3mEwU4UcKGCMDKwDMCOA4OFWWxKN6cT5FIacO9ftnbsi0JFGgiUdHF78n77Y45p/u+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercado\\MiniMercadoApp.Api\\MiniMercadoApp.Api.csproj",
+  "projectFilePath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Api\\MiniMercadoApp.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edgar O\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Edgar O\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

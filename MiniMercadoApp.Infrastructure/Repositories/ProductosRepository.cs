@@ -12,25 +12,25 @@ namespace MiniMercadoApp.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<TblProducto> GetProducto()
+        public IEnumerable<Productos> GetProducto()
         {
-            return _context.TblProductos;
+            return _context.Productoss;
         }
 
-        public TblProducto GetProductoById(int IdProducto)
+        public Productos GetProductoById(int IdProducto)
         {
-            return _context.TblProductos.FirstOrDefault(x => x.IdProducto == IdProducto);
+            return _context.Productoss.FirstOrDefault(x => x.IdProducto == IdProducto);
         }
 
-        public void InsertProducto(TblProducto productos)
+        public void InsertProducto(Productos productos)
         {
-            _context.TblProductos.Add(productos);
+            _context.Productoss.Add(productos);
             _context.SaveChanges();
         }
 
-        public void UpdateProducto(TblProducto productos)
+        public void UpdateProducto(Productos productos)
         {
-            var productosExistente = _context.TblProductos.FirstOrDefault(x => x.IdProducto == productos.IdProducto);
+            var productosExistente = _context.Productoss.FirstOrDefault(x => x.IdProducto == productos.IdProducto);
             productosExistente.IdProducto = productos.IdProducto;
             productosExistente.DescripcionProducto = productos.DescripcionProducto;
             productosExistente.Precio = productos.Precio;
@@ -41,8 +41,8 @@ namespace MiniMercadoApp.Infrastructure.Repositories
 
         public void DeleteProducto(int IdProducto)
         {
-            var productoExistente = _context.TblProductos.FirstOrDefault(x => x.IdProducto == IdProducto);
-            _context.TblProductos.Remove(productoExistente);
+            var productoExistente = _context.Productoss.FirstOrDefault(x => x.IdProducto == IdProducto);
+            _context.Productoss.Remove(productoExistente);
             _context.SaveChanges();
         }
     }

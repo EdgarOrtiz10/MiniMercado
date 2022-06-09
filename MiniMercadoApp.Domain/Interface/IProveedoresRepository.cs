@@ -7,12 +7,12 @@ namespace MinimercadoApp.Domain.Interfaces
 {
     public interface IProveedoresRepository
     {
-        TblProveedore GetProveedoresById(int IdProveedor);
-        IEnumerable<TblProveedore> GetProveedores();
+        Proveedores GetProveedoresById(int IdProveedor);
+        IEnumerable<Proveedores> GetProveedores();
 
-        void InsertProveedores(TblProveedore Proveedores);
+        void InsertProveedores(Proveedores Proveedores);
 
-        void UpdateProveedores(TblProveedore Proveedores);
+        void UpdateProveedores(Proveedores Proveedores);
 
         void DeleteProveedores(int IdProveedor);
     }

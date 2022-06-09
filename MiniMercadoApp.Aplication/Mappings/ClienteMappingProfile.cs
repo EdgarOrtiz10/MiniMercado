@@ -9,11 +9,11 @@ namespace MiniMercadoApp.Aplication.Mappings
     {
         public ClienteMappingProfile()
         {
-            CreateMap<CreateClienteRequest, TblCliente>();
-            CreateMap<TblCliente, CreateClienteRequest>();
+            CreateMap<CreateClienteRequest, Cliente>();
+            CreateMap<Cliente, CreateClienteRequest>();
 
-            CreateMap<UpdateClienteRequest, TblCliente>();
-            CreateMap<TblCliente, UpdateClienteRequest>();
+            CreateMap<UpdateClienteRequest, Cliente>();
+            CreateMap<Cliente, UpdateClienteRequest>();
         }
     }
 }

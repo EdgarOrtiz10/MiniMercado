@@ -12,30 +12,30 @@ namespace MiniMercadoApp.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<TblVenta> GetVentas()
+        public IEnumerable<Ventas> GetVentas()
         {
-            return _context.TblVentas;
+            return _context.Ventass;
         }
 
-        public TblVenta GetVentasById(int IdVentas)
+        public Ventas GetVentasById(int IdVentas)
         {
-            return _context.TblVentas.FirstOrDefault(x => x.IdVenta == IdVentas);
+            return _context.Ventass.FirstOrDefault(x => x.IdVenta == IdVentas);
         }
 
-        public TblVenta GetSalaById(int IdVenta)
+        public Ventas GetSalaById(int IdVenta)
         {
-            return _context.TblVentas.FirstOrDefault(x => x.IdVenta == IdVenta);
+            return _context.Ventass.FirstOrDefault(x => x.IdVenta == IdVenta);
         }
 
-        public void InsertVentas(TblVenta ventas)
+        public void InsertVentas(Ventas ventas)
         {
-            _context.TblVentas.Add(ventas);
+            _context.Ventass.Add(ventas);
             _context.SaveChanges();
         }
 
-        public void UpdateVentas(TblVenta ventas)
+        public void UpdateVentas(Ventas ventas)
         {
-            var ventaExistente = _context.TblVentas.FirstOrDefault(x => x.IdVenta == ventas.IdVenta);
+            var ventaExistente = _context.Ventass.FirstOrDefault(x => x.IdVenta == ventas.IdVenta);
             ventaExistente.IdVenta = ventas.IdVenta;
             ventaExistente.IdFactura = ventas.IdFactura;
             ventaExistente.IdProducto = ventas.IdProducto;
@@ -45,8 +45,8 @@ namespace MiniMercadoApp.Infrastructure.Repositories
 
         public void DeleteVentas(int IdVentas)
         {
-            var ventasExistente = _context.TblVentas.FirstOrDefault(x => x.IdVenta == IdVentas);
-            _context.TblVentas.Remove(ventasExistente);
+            var ventasExistente = _context.Ventass.FirstOrDefault(x => x.IdVenta == IdVentas);
+            _context.Ventass.Remove(ventasExistente);
             _context.SaveChanges();
         }
     }

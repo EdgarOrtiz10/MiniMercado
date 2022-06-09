@@ -29,7 +29,7 @@ namespace MiniMercadoApp.Api.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public IActionResult Get([FromRoute] GetFacturasByIdRequest request)
         {
             return Ok(_repository.GetFacturaById(request.Id));
@@ -39,29 +39,21 @@ namespace MiniMercadoApp.Api.Controllers
         [HttpPost]
         public IActionResult Post(CreateFacturasRequest request)
         {
-            var facturas = _mapper.Map<TblFactura>(request);
+            var facturas = _mapper.Map<Factura>(request);
             _repository.InsertFactura(facturas);
-            return Ok();
-        }
-
-        [HttpPut]
-        public IActionResult Put(UpdateFacturasRequest request)
-        {
-            var facturas = _mapper.Map<TblFactura>(request);
-            _repository.UpdateFactura(facturas);
             return Ok();
         }
 
         [HttpPut]
         public IActionResult put(UpdateFacturasRequest request)
         {
-            var facturas = _mapper.Map<TblFactura>(request);
+            var facturas = _mapper.Map<Factura>(request);
             _repository.UpdateFactura(facturas);
             return Ok();
         }
 
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute] DeleteFacturasRequest request)
         {
             _repository.DeleteFactura(request.Id);

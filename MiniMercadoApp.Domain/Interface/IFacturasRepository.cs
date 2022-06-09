@@ -7,12 +7,12 @@ namespace MinimercadoApp.Domain.Interfaces
 {
     public interface IFacturasRepository
     {
-        TblFactura GetFacturaById(int idFactura);
-        IEnumerable<TblFactura> GetFactura();
+        Factura GetFacturaById(int idFactura);
+        IEnumerable<Factura> GetFactura();
 
-        void InsertFactura(TblFactura factura);
+        void InsertFactura(Factura factura);
 
-        void UpdateFactura(TblFactura factura);
+        void UpdateFactura(Factura factura);
 
         void DeleteFactura(int idFactura);
     }

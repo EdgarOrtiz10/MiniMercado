@@ -17,18 +17,19 @@ namespace MiniMercadoApp.Infrastructure.Persistance
         {
         }
 
-        public virtual DbSet<TblCategoria> TblCategoria { get; set; } = null!;
-        public virtual DbSet<TblCliente> TblCliente { get; set; } = null!;
-        public virtual DbSet<TblFactura> TblFacturas { get; set; } = null!;
-        public virtual DbSet<TblProducto> TblProductos { get; set; } = null!;
-        public virtual DbSet<TblProveedore> TblProveedores { get; set; } = null!;
-        public virtual DbSet<TblVenta> TblVentas { get; set; } = null!;
+        public virtual DbSet<Categoria> Categoria { get; set; } = null!;
+        public virtual DbSet<Cliente> Cliente { get; set; } = null!;
+        public virtual DbSet<Factura> Facturas { get; set; } = null!;
+        public virtual DbSet<Productos> Productoss { get; set; } = null!;
+        public virtual DbSet<Proveedores> Proveedoress { get; set; } = null!;
+        public virtual DbSet<Ventas> Ventass { get; set; } = null!;
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TblCategoria>(entity =>
+            modelBuilder.Entity<Categoria>(entity =>
             {
+                entity.ToTable("TblCategoria");
                 entity.HasKey(e => e.IdCategoria)
                     .HasName("PK__TblCateg__A3C02A101B266B3E");
 
@@ -43,12 +44,13 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TblCliente>(entity =>
+            modelBuilder.Entity<Cliente>(entity =>
             {
+                entity.ToTable("TblCliente");
                 entity.HasKey(e => e.IdCliente)
                     .HasName("PK__TblClien__D594664284A4FD43");
 
-                entity.ToTable("TblCliente");
+                entity.ToTable("Cliente");
 
                 entity.Property(e => e.IdCliente).HasColumnType("numeric(18, 0)");
 
@@ -83,8 +85,9 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                 entity.Property(e => e.Telefono).HasColumnType("numeric(10, 0)");
             });
 
-            modelBuilder.Entity<TblFactura>(entity =>
+            modelBuilder.Entity<Factura>(entity =>
             {
+                entity.ToTable("TblFacturas");
                 entity.HasKey(e => e.IdFactura)
                     .HasName("PK__TblFactu__50E7BAF1975EDDC9");
 
@@ -97,14 +100,15 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                 entity.Property(e => e.ValorFactura).HasColumnType("numeric(18, 0)");
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.TblFacturas)
+                    .WithMany(p => p.Facturas)
                     .HasForeignKey(d => d.IdCliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TblFactur__IdCli__2A4B4B5E");
             });
 
-            modelBuilder.Entity<TblProducto>(entity =>
+            modelBuilder.Entity<Productos>(entity =>
             {
+                entity.ToTable("TblProductos");
                 entity.HasKey(e => e.IdProducto)
                     .HasName("PK__TblProdu__098892108E9EE02A");
 
@@ -121,20 +125,21 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                 entity.Property(e => e.Precio).HasColumnType("numeric(18, 0)");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
-                    .WithMany(p => p.TblProductos)
+                    .WithMany(p => p.Productoss)
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TblProduc__IdCat__2D27B809");
 
                 entity.HasOne(d => d.IdProveedorNavigation)
-                    .WithMany(p => p.TblProductos)
+                    .WithMany(p => p.Productoss)
                     .HasForeignKey(d => d.IdProveedor)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__TblProduc__IdPro__2E1BDC42");
             });
 
-            modelBuilder.Entity<TblProveedore>(entity =>
+            modelBuilder.Entity<Proveedores>(entity =>
             {
+                entity.ToTable("TblProveedores");
                 entity.HasKey(e => e.IdProveedor)
                     .HasName("PK__TblProve__E8B631AF5905CDA9");
 
@@ -155,10 +160,11 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                 entity.Property(e => e.TelefonoProveedor).HasColumnType("numeric(10, 0)");
             });
 
-            modelBuilder.Entity<TblVenta>(entity =>
+            modelBuilder.Entity<Ventas>(entity =>
             {
+                entity.ToTable("TblVentas");
                 entity.HasKey(e => e.IdVenta)
-                    .HasName("PK__TblVenta__BC1240BD614A2614");
+                    .HasName("PK__Ventas__BC1240BD614A2614");
 
                 entity.Property(e => e.IdVenta).HasColumnType("numeric(18, 0)");
 
@@ -169,16 +175,16 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                 entity.Property(e => e.IdProducto).HasColumnType("numeric(18, 0)");
 
                 entity.HasOne(d => d.IdFacturaNavigation)
-                    .WithMany(p => p.TblVenta)
+                    .WithMany(p => p.Ventas)
                     .HasForeignKey(d => d.IdFactura)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TblVentas__IdFac__30F848ED");
+                    .HasConstraintName("FK__Ventass__IdFac__30F848ED");
 
                 entity.HasOne(d => d.IdProductoNavigation)
-                    .WithMany(p => p.TblVenta)
+                    .WithMany(p => p.Ventas)
                     .HasForeignKey(d => d.IdProducto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TblVentas__IdPro__31EC6D26");
+                    .HasConstraintName("FK__Ventass__IdPro__31EC6D26");
             });
 
             OnModelCreatingPartial(modelBuilder);

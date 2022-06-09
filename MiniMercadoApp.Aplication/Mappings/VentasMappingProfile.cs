@@ -14,11 +14,11 @@ namespace MiniMercadoApp.Aplication.Mappings
     {
         public VentasMappingProfile()
         {
-            CreateMap<CreateVentasRequest, TblVenta>();
-            CreateMap<TblVenta, CreateVentasRequest>();
+            CreateMap<CreateVentasRequest, Ventas>();
+            CreateMap<Ventas, CreateVentasRequest>();
 
-            CreateMap<UpdateVentasRequest, TblVenta>();
-            CreateMap<TblVenta, UpdateVentasRequest>();
+            CreateMap<UpdateVentasRequest, Ventas>();
+            CreateMap<Ventas, UpdateVentasRequest>();
         }
     }
 }

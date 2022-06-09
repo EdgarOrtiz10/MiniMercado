@@ -30,7 +30,7 @@ namespace MiniMercadoApp.Api.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public IActionResult Get([FromRoute] GetVentasByIdRequest request)
         {
             return Ok(_repository.GetVentasById(request.Id));
@@ -40,7 +40,7 @@ namespace MiniMercadoApp.Api.Controllers
         [HttpPost]
         public IActionResult Post(CreateVentasRequest request)
         {
-            var ventas = _mapper.Map<TblVenta>(request);
+            var ventas = _mapper.Map<Ventas>(request);
             _repository.InsertVentas(ventas);
             return Ok();
         }
@@ -48,21 +48,12 @@ namespace MiniMercadoApp.Api.Controllers
         [HttpPut]
         public IActionResult Put(UpdateVentasRequest request)
         {
-            var ventas = _mapper.Map<TblVenta>(request);
+            var ventas = _mapper.Map<Ventas>(request);
             _repository.UpdateVentas(ventas);
             return Ok();
         }
 
-        [HttpPut]
-        public IActionResult put(UpdateVentasRequest request)
-        {
-            var ventas = _mapper.Map<TblVenta>(request);
-            _repository.UpdateVentas(ventas);
-            return Ok();
-        }
-
-
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute] DeleteVentasRequest request)
         {
             _repository.DeleteVentas(request.Id);

@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace MinimercadoApp.Domain.Interfaces
-{
+{ 
     public interface ICategoriaRepository
     {
-        TblCategoria GetCategoriaById(int IdCategoria);
-        IEnumerable<TblCategoria> GetCategoria();
+        Categoria GetCategoriaById(int IdCategoria);
+        IEnumerable<Categoria> GetCategoria();
 
-        void InsertCategoria(TblCategoria categoria);
+        void InsertCategoria(Categoria categoria);
 
-        void UpdateCategoria(TblCategoria categoria);
+        void UpdateCategoria(Categoria categoria);
 
         void DeleteCategoria(int IdCategoria);
     }
