@@ -52,7 +52,7 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddTransient<ICategoriaService, CategoriaService>();
 
-builder.Services.AddSwaggerGen(options =>);
+builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices();
 
 var app = builder.Build();
