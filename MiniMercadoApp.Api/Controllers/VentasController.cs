@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MiniMercado.Application.Requests;
 using MinimercadoApp.Application.Requests;
@@ -12,6 +13,7 @@ namespace MiniMercadoApp.Api.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class VentasController : ControllerBase
     {
         private readonly IVentasRepository _repository;

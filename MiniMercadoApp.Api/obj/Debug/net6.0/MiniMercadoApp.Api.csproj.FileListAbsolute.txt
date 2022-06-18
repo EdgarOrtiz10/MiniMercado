@@ -148,3 +148,6 @@ C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniM
 C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Api\obj\Debug\net6.0\MiniMercadoApp.Api.pdb
 C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Api\obj\Debug\net6.0\MiniMercadoApp.Api.genruntimeconfig.cache
 C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Api\obj\Debug\net6.0\ref\MiniMercadoApp.Api.dll
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Api\bin\Debug\net6.0\MiniMercadoApp.Api.xml
+C:\Users\Edgar O\Documents\CURSO DE PROGRAMACIÓN INTENSIVO\MATERIAS\WEB 1\MiniMercado\MiniMercadoApp.Api\obj\Debug\net6.0\MiniMercadoApp.Api.xml

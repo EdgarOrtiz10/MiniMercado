@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MiniMercadoApp.Domain.Entities
+namespace MiniMercadoApp.Aplication.Response
 {
-    public partial class TblCliente
+    public class ClienteResponse
     {
-        public TblCliente()
-        {
-            TblFacturas = new HashSet<TblFactura>();
-        }
-
         public decimal IdCliente { get; set; }
         public string Nombre1 { get; set; } = null!;
         public string? Nombre2 { get; set; }
@@ -19,7 +17,5 @@ namespace MiniMercadoApp.Domain.Entities
         public decimal Telefono { get; set; }
         public string Sexo { get; set; } = null!;
         public string? Correo { get; set; }
-
-        public virtual ICollection<TblFactura> TblFacturas { get; set; }
     }
 }

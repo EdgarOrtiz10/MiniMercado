@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MinimercadoApp.Application.Requests;
+using MiniMercadoApp.Aplication.Response;
 using MiniMercadoApp.Application.Requests;
 using MiniMercadoApp.Domain.Entities;
 
@@ -14,6 +15,8 @@ namespace MiniMercadoApp.Aplication.Mappings
 
             CreateMap<UpdateCategoriaRequest, Categoria>();
             CreateMap<Categoria, UpdateCategoriaRequest>();
+
+            CreateMap<Categoria, CategoriaResponse>();
         }
     }
 }

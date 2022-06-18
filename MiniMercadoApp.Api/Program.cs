@@ -1,9 +1,14 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MinimercadoApp.Application;
 using MinimercadoApp.Domain.Interfaces;
+using MiniMercadoApp.Aplication.Interface;
+using MiniMercadoApp.Aplication.Services;
 using MiniMercadoApp.Infrastructure.Filters;
 using MiniMercadoApp.Infrastructure.Persistance;
 using MiniMercadoApp.Infrastructure.Repositories;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,7 +29,30 @@ builder.Services.AddTransient<IProductosRepository, ProductosRepository>();
 builder.Services.AddTransient<IProveedoresRepository, ProveedoresRepository>();
 builder.Services.AddTransient<IVentasRepository, VentasRepository>();
 
-builder.Services.AddSwaggerGen();
+//Registramos la autenticacion con JWT
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    //Se definen los parametros de validación del token
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = "https://localhost:44357",
+        ValidAudience = "https://localhost:44357",
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("hh8f0iiajsiahfawpfjckslirmclslxplk"))
+    };
+});
+
+
+builder.Services.AddTransient<ICategoriaService, CategoriaService>();
+
+builder.Services.AddSwaggerGen(options =>);
 builder.Services.AddApplicationServices();
 
 var app = builder.Build();
@@ -39,6 +67,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//Se registra la autenticación 
 
 app.UseAuthorization();
 

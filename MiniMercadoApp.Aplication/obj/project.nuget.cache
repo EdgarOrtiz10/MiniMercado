@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vvTR3S7iQ8oPixItBu5pc5jzj47BOJdKBXsyZvx91DX66srddnyHvdSAjWwXj/WYuqcx+cqB+lHKSTmLmLY30g==",
+  "dgSpecHash": "rnQUqy3HlCQ+szBABOji7Xaqfisb0iXiZVsCWgi7ObPEY7SINEjvV48Ex6gcg609e/F2bxEgeQGHUhhEIGug2g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Edgar O\\Documents\\CURSO DE PROGRAMACIÓN INTENSIVO\\MATERIAS\\WEB 1\\MiniMercado\\MiniMercadoApp.Aplication\\MiniMercadoApp.Aplication.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Edgar O\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Edgar O\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Edgar O\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Edgar O\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Edgar O\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

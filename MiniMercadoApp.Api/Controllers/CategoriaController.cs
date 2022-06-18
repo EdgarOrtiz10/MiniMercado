@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MiniMercado.Application.Requests;
 using MinimercadoApp.Application.Requests;
 using MinimercadoApp.Domain.Interfaces;
+using MiniMercadoApp.Aplication.Interface;
 using MiniMercadoApp.Application.Requests;
 using MiniMercadoApp.Domain.Entities;
 
@@ -11,44 +13,41 @@ namespace MiniMercadoApp.Api.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriaController : ControllerBase
     {
-        private readonly ICategoriaRepository _repository;
-        private readonly IMapper _mapper;
+        private readonly ICategoriaService _service;
 
-        public CategoriaController(ICategoriaRepository repository, IMapper mapper)
+        public CategoriaController(ICategoriaService service)
         {
-            _repository = repository;
-            _mapper = mapper;
+            _service = service;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_repository.GetCategoria());
+            return Ok(_service.GetCategoria());
         }
 
         
         [HttpGet("{Id}")]
         public IActionResult Get([FromRoute] GetCategoriaByIdRequest request)
         {
-            return Ok(_repository.GetCategoriaById(request.Id));
+            return Ok(_service.GetCategoriaById(request.Id));
         }
 
 
         [HttpPost]
         public IActionResult Post(CreateCategoriaRequest request)
         {
-            var categoria = _mapper.Map<Categoria>(request);
-            _repository.InsertCategoria(categoria);
+            _service.InsertCategoria(request);
             return Ok();
         }
 
         [HttpPut]
         public IActionResult Put(UpdateCategoriaRequest request)
         {
-            var categoria = _mapper.Map<Categoria>(request);
-            _repository.UpdateCategoria(categoria);
+            _service.UpdateCategoria(request);
             return Ok();
         }
 
@@ -56,7 +55,7 @@ namespace MiniMercadoApp.Api.Controllers
         [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute] DeleteClienteRequest request)
         {
-            _repository.DeleteCategoria(request.Id);
+            _service.DeleteCategoria(request.Id);
             return Ok();
         }
 
