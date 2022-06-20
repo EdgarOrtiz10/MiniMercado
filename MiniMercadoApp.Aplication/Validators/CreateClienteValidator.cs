@@ -80,7 +80,7 @@ namespace MiniMercadoApp.Aplication.Validators
                 .NotEqual(0)
                 .WithMessage(" La identificación es requerida");
 
-         
+
         }
     }
 }

@@ -69,7 +69,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 //Se registra la autenticación 
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

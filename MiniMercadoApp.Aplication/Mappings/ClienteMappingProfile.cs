@@ -17,3 +17,4 @@ namespace MiniMercadoApp.Aplication.Mappings
         }
     }
 }
+

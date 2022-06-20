@@ -20,7 +20,7 @@ namespace CinemaApp.Api.Controllers
                 return Unauthorized();
 
             //Si el usuario es valido genero el token de autenticación
-            var token = GenerateToken(loginRequest.UserName);
+            var token = GenerateToken(loginRequest.IdUser);
             return Ok(new { token });
         }
 
@@ -28,7 +28,7 @@ namespace CinemaApp.Api.Controllers
         private bool ValidateUser(UserLoginRequest loginRequest)
         {
             // TODO: Ir a la BD y validar el usuario
-            if (loginRequest.UserName == "admin" && loginRequest.Password == "abc123")
+            if (loginRequest.IdUser == "admin" && loginRequest.Pass == "abc123")
                 return true;
 
             return false;

@@ -23,7 +23,7 @@ namespace MiniMercadoApp.Infrastructure.Persistance
         public virtual DbSet<Productos> Productoss { get; set; } = null!;
         public virtual DbSet<Proveedores> Proveedoress { get; set; } = null!;
         public virtual DbSet<Ventas> Ventass { get; set; } = null!;
-
+        public virtual DbSet<Login> Login { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -185,6 +185,25 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                     .HasForeignKey(d => d.IdProducto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Ventass__IdPro__31EC6D26");
+            });
+
+            modelBuilder.Entity<Login>(entity =>
+            {
+                entity.HasKey(e => e.IdUser)
+                    .HasName("PK__Login__B7C926385DC01C60");
+
+                entity.ToTable("Login");
+
+                entity.Property(e => e.IdUser).HasColumnType("numeric(18, 0)");
+
+                entity.Property(e => e.Active)
+                    .HasColumnType("numeric(1, 0)")
+                    .HasColumnName("active");
+
+                entity.Property(e => e.Pass)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("pass");
             });
 
             OnModelCreatingPartial(modelBuilder);
