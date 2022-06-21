@@ -8,6 +8,7 @@ using MiniMercadoApp.Aplication.Services;
 using MiniMercadoApp.Infrastructure.Filters;
 using MiniMercadoApp.Infrastructure.Persistance;
 using MiniMercadoApp.Infrastructure.Repositories;
+using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,7 +53,22 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddTransient<ICategoriaService, CategoriaService>();
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "MiiniMercado API",
+        Description = "Estas son los endpoints disponibles para la API Minimercado"
+    });
+
+    //Obtener de forma dinamica el nombre del archivo
+    var nombreArchivo = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+
+    //Creamos una variable con la ruta completa del archivo
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, nombreArchivo);
+
+    options.IncludeXmlComments(xmlPath);
+});
 builder.Services.AddApplicationServices();
 
 var app = builder.Build();
@@ -63,7 +79,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        //Especificar la url en donde se encuentra el swagger de la API
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "MiniMercado API v1");
+
+        //Especificar que swagger sea la pagina por defecto
+        options.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();
