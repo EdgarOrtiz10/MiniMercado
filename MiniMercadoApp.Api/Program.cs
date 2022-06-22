@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MinimercadoApp.Application;
 using MinimercadoApp.Domain.Interfaces;
 using MiniMercadoApp.Aplication.Interface;
@@ -61,6 +62,34 @@ builder.Services.AddSwaggerGen(options =>
         Description = "Estas son los endpoints disponibles para la API Minimercado"
     });
 
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = @"Bienvenido al MiniMercado, recuerde que al escribir el toke debe de ir antes la palabra 'Bearer (token)'",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement()
+      {
+        {
+          new OpenApiSecurityScheme
+          {
+            Reference = new OpenApiReference
+              {
+                Type = ReferenceType.SecurityScheme,
+                Id = "Bearer"
+              },
+              Scheme = "oauth2",
+              Name = "Bearer",
+              In = ParameterLocation.Header,
+
+            },
+            new List<string>()
+          }
+        });
+
     //Obtener de forma dinamica el nombre del archivo
     var nombreArchivo = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
 
@@ -77,14 +106,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(options =>
+    app.UseSwaggerUI(/*options =>
     {
         //Especificar la url en donde se encuentra el swagger de la API
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "MiniMercado API v1");
 
         //Especificar que swagger sea la pagina por defecto
         options.RoutePrefix = string.Empty;
-    });
+    }*/);
 }
 
 app.UseHttpsRedirection();
