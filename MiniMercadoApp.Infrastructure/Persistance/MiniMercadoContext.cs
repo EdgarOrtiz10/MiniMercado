@@ -23,7 +23,7 @@ namespace MiniMercadoApp.Infrastructure.Persistance
         public virtual DbSet<Productos> Productoss { get; set; } = null!;
         public virtual DbSet<Proveedores> Proveedoress { get; set; } = null!;
         public virtual DbSet<Ventas> Ventass { get; set; } = null!;
-        public virtual DbSet<Login> Login { get; set; } = null!;
+        //public virtual DbSet<Login> Login { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -187,7 +187,7 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                     .HasConstraintName("FK__Ventass__IdPro__31EC6D26");
             });
 
-            modelBuilder.Entity<Login>(entity =>
+            /*modelBuilder.Entity<Login>(entity =>
             {
                 entity.HasKey(e => e.IdUser)
                     .HasName("PK__Login__B7C926385DC01C60");
@@ -204,7 +204,7 @@ namespace MiniMercadoApp.Infrastructure.Persistance
                     .HasMaxLength(20)
                     .IsUnicode(false)
                     .HasColumnName("pass");
-            });
+            });*/
 
             OnModelCreatingPartial(modelBuilder);
         }

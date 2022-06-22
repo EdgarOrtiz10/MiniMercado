@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MinimercadoApp.Application.Requests;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using MiniMercadoApp.Api.Request;
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using MiniMercadoApp.Api.Request;
 
 namespace CinemaApp.Api.Controllers
 {
@@ -20,7 +22,7 @@ namespace CinemaApp.Api.Controllers
                 return Unauthorized();
 
             //Si el usuario es valido genero el token de autenticación
-            var token = GenerateToken(loginRequest.IdUser);
+            var token = GenerateToken(loginRequest.UserName);
             return Ok(new { token });
         }
 
@@ -28,7 +30,7 @@ namespace CinemaApp.Api.Controllers
         private bool ValidateUser(UserLoginRequest loginRequest)
         {
             // TODO: Ir a la BD y validar el usuario
-            if (loginRequest.IdUser == "admin" && loginRequest.Pass == "abc123")
+            if (loginRequest.UserName == "admin" && loginRequest.Password == "abc123")
                 return true;
 
             return false;
